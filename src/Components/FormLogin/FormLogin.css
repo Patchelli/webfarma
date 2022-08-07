@@ -1,0 +1,61 @@
+.contPag{
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+.contBase{
+    width: 80%;
+    height: 450px;
+    margin: 10px;
+    justify-self: center;
+    display: grid;
+    grid-template-areas: 'imagem form';
+    background-color: rgb(255, 230, 0);
+    border-radius: 20px 20px 20px 20px; 
+    color: rgb(17, 17, 18);
+    box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 5px;
+}
+.contBase > img {
+    grid-area: 'imagem';
+    align-self: center;
+    justify-self: center;
+    width: 30%;
+}
+.contForm{
+    width: 100%;
+    grid-area: 'form';
+    background-color: rgb(249, 249, 249);
+    display: grid;
+    border-radius: 20px 0px;
+    align-items: center;
+    padding: 20px;
+}
+article {
+    width: 70%;
+    justify-self: center;
+    display: grid;
+}
+.titulo {
+    font-size: 25px;
+}
+article > small{
+    justify-self: center;
+    padding: 10px;
+}
+label {
+    width: 70%;
+    height: 35px;
+    justify-self: center;
+    align-self: flex-end;
+}
+.inputs {
+    width: 70%;
+    height: 35px;
+    justify-self: center;
+    align-self: baseline;
+}
+.botao {
+    width: 30%;
+    height: 30px;
+    justify-self: center;
+}
