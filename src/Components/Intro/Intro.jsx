@@ -2,6 +2,12 @@ import React from "react";
 import './Intro.css'
 import Remedio from '../../img/remedio.png'
 import Saude from '../../img/saude.png'
+import Doctor from '../../img/doctor.png'
+import Vector1 from '../../img/Vector1.png'
+import Vector2 from '../../img/Vector2.png'
+import FloatingDiv from "../FloatingDiv/FloatingDiv";
+import Estetoscopio from '../../img/este.png'
+import RemedioFloating from '../../img/medicine.png'
 const Intro = () => {
     return (
         <div className="intro">
@@ -24,7 +30,17 @@ const Intro = () => {
                 </div>
             </div>
             <div className="i-right">
-                A melhor farmacia Online
+                <img src={Vector1} alt="" />
+                <img src={Vector2} alt="" />
+                <img src={Doctor} alt="" />
+                <div style={{top : '-4%',left : '68%'}}>
+                    <FloatingDiv image={Estetoscopio} text1='Saude' text2='Vida'/>
+                </div>
+                <div style={{top :'18rem' ,left : '0rem'}}>
+                    <FloatingDiv image={RemedioFloating} text1='Melhores' text2='Preços'/>
+                </div>
+                <div className="blur" style={{background : "rgb(238 210 255)"}}></div>
+                <div className="blur" style={{background:"#C1F5FF",top :"17rem",width:"21rem",height:"11rem"}}></div>
             </div>
         </div>
     )
