@@ -10,7 +10,6 @@ export const getProducts = async () => {
 }
 
 export const putProduct = async (id, body) => {
-    const resp = await inst.put(`/product/${id}`, body)
+    const resp = await api.put(`/product/${id}`, body)
     console.log(resp)
-    return resp.data.msg
 }
