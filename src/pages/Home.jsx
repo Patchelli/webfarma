@@ -18,10 +18,10 @@ const Home = () => {
             <Services />
             <Work />
             <Product />
+            <Experience />
             <Testimonial />
             <Contact />
             <Footer />
-            <Experience />
         </>
     )
 }
