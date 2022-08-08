@@ -6,7 +6,6 @@ import Doctor from '../../img/remedio.png'
 import 'swiper/css'
 import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css/pagination";
-// import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import "swiper/css/scrollbar";
 const Product = () => {
@@ -34,14 +33,12 @@ const Product = () => {
             <Swiper
                 modules={[Autoplay, Pagination, Navigation]}
                 className="products-slider"
-                slidesPerView={1}
+                slidesPerView={3}
                 autoplay={true}
                 pagination={{
                     clickable: true,
                 }}
                 navigation={true}
-
-            // className="mySwiper"
 
             >
                 {produtos.map((post) => {
