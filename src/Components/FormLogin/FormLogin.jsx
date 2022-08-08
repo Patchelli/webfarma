@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import imgLogin from '../../img/login.svg'
-import S from './FormLogin.css'
+import imgLogin from '../../img/login.png';
+import './FormLogin.css';
 
 
 const FormLogin = () => {
@@ -16,19 +16,18 @@ const FormLogin = () => {
   }
 
   return (
-      <div className={S.contBase}>
-        <img src={imgLogin} alt="Login" />
-        <form className={S.contForm}>
+      <div className='contBase'>
+         <img src={imgLogin} alt="Login" />
+        <form className='contForm'>
           <article>
-            <p className={S.titulo}>Olá!</p>
-            <p className={S.titulo}>Seja bem vindo de volta.</p>
-            <small>Faça o seu login agora</small>
+            <p className='titulo'>Olá!</p>
+            <p className='titulo'>Seja bem vindo de volta.</p>
           </article>
           <label htmlFor="inputUser">Usuário</label>
-          <input className={S.inputs} id='inputUser' type="text" value={userName} onChange={(event => setUserName(event.target.value))}/>
+          <input className='inputs' id='inputUser' type="text" value={userName} onChange={(event => setUserName(event.target.value))}/>
           <label htmlFor="inputPassword">Senha</label>
-          <input className={S.inputs} id='inputPassword' type="password" value={password} onChange={(event => setPassword(event.target.value))} />
-          <input className={S.botao} type="button" value='Login' onClick={(event)=>{
+          <input className='inputs' id='inputPassword' type="password" value={password} onChange={(event => setPassword(event.target.value))} />
+          <input className='button' type="button" value='Login' onClick={(event)=>{
           event.preventDefault()
           validarDados()
         }}/>

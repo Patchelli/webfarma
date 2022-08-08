@@ -1,13 +1,13 @@
 import React from 'react'
 import FormLogin from '../../Components/FormLogin/FormLogin'
-import S from './Login.module.css'
+import './Login.css'
 
-const PageLogin = () => {
+const Login = () => {
   return (
-    <div className={S.container}>
+    <div className='container'>
         <FormLogin />
     </div>
   )
 }
 
-export default PageLogin
+export default Login
