@@ -6,13 +6,15 @@ import Inara from '../../img/inara.jpg'
 import Resilia from '../../img/resilia.png'
 import Ebanx from '../../img/ebanx.png'
 import Kassi from '../../img/kassi.jpg'
+import { motion } from "framer-motion";
+import { Link } from 'react-scroll'
 
 const Work = () => {
     const theme = useContext(themeContext);
     const darkMode = theme.state.darkMode;
 
     return (
-        <div className="works">
+        <div className="works" id="Experience">
             <div className="awesome">
                 <span style={{ color: darkMode ? "white" : "" }}>Trabalhos</span>
                 <span>Clientes</span>
@@ -21,11 +23,19 @@ const Work = () => {
                     <br />
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 </span>
-                <button className="button s-button">Veja</button>
+                <Link to="contact" smooth={true} spy={true}>
+                    <button className="button s-button">Veja</button>
+                </Link>
                 <div className="blur s-blur1" style={{ background: "#abf1ff94" }}></div>
             </div>
             <div className="w-right">
-                <div className="w-mainCircle">
+                <motion.div
+                    initial={{ rotate: 45 }}
+                    whileInView={{ rotate: 0 }}
+                    viewport={{ margin: "-40px" }}
+                    transition={{ duration: 3.5, type: "spring" }}
+                    className="w-mainCircle"
+                >
                     <div className="w-secCircle">
                         <img src={Ebanx} alt="Ebanx" />
                     </div>
@@ -41,7 +51,7 @@ const Work = () => {
                     <div className="w-secCircle">
                         <img src={Resilia} alt="Resilia" />
                     </div>
-                </div>
+                </motion.div>
                 <div className="w-backCircle blueCircle"></div>
                 <div className="w-backCircle yellowCircle"></div>
             </div>

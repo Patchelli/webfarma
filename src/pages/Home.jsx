@@ -10,15 +10,16 @@ import Testimonial from "../Components/Testimonial/Testimonial";
 import Work from "../Components/Work/Work";
 
 
+
 const Home = () => {
     return (
         <>
             <Navbar />
             <Intro />
             <Services />
+            <Experience />
             <Work />
             <Product />
-            <Experience />
             <Testimonial />
             <Contact />
             <Footer />

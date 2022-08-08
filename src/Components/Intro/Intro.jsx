@@ -9,8 +9,11 @@ import FloatingDiv from "../FloatingDiv/FloatingDiv";
 import Estetoscopio from '../../img/este.png'
 import RemedioFloating from '../../img/medicine.png'
 import { themeContext } from "../../Context";
+import { motion } from 'framer-motion';
 const Intro = () => {
-    // context
+
+    const transition = { duration: 2, type: 'spring' }
+
     const theme = useContext(themeContext);
     const darkMode = theme.state.darkMode;
 
@@ -38,12 +41,24 @@ const Intro = () => {
                 <img src={Vector1} alt="" />
                 <img src={Vector2} alt="" />
                 <img src={Doctor} alt="" />
-                <div style={{ top: '-4%', left: '68%' }}>
+                <motion.div
+                    initial={{ top: '-4%', left: '74%' }}
+                    whileInView={{ left: '68%' }}
+                    transition={transition}
+                    style={{ top: '-4%', left: '68%' }}
+                    className='floating-dv'
+                >
                     <FloatingDiv image={Estetoscopio} text1='Saude' text2='Vida' />
-                </div>
-                <div style={{ top: '18rem', left: '0rem' }}>
+                </motion.div>
+                <motion.div
+                    initial={{ top: '18rem', left: '9rem' }}
+                    whileInView={{ left: '0rem' }}
+                    transition={transition}
+                    style={{ top: '18rem', left: '0rem' }}
+                    className='floating-dv'
+                >
                     <FloatingDiv image={RemedioFloating} text1='Melhores' text2='Preços' />
-                </div>
+                </motion.div>
                 <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
                 <div className="blur" style={{ background: "#C1F5FF", top: "17rem", width: "21rem", height: "11rem" }}></div>
             </div>
