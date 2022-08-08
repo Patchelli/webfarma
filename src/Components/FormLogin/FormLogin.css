@@ -1,34 +1,32 @@
-.contPag{
-    width: 100%;
-    height: 100%;
-    display: grid;
-}
 .contBase{
     width: 80%;
-    height: 450px;
-    margin: 10px;
+    height: 480px;
+    margin-top: 5%;
+    margin-bottom: 5%;
     justify-self: center;
     display: grid;
     grid-template-areas: 'imagem form';
-    background-color: rgb(255, 230, 0);
+    background-color: #FCA61F;
     border-radius: 20px 20px 20px 20px; 
     color: rgb(17, 17, 18);
-    box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 6px;
 }
 .contBase > img {
     grid-area: 'imagem';
     align-self: center;
     justify-self: center;
-    width: 30%;
+    width: 80%;
 }
 .contForm{
     width: 100%;
     grid-area: 'form';
-    background-color: rgb(249, 249, 249);
+    background-color: rgb(238, 236, 236);
     display: grid;
     border-radius: 20px 0px;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 article {
     width: 70%;
@@ -36,26 +34,80 @@ article {
     display: grid;
 }
 .titulo {
-    font-size: 25px;
+    font-size: 30px;
 }
 article > small{
     justify-self: center;
     padding: 10px;
 }
 label {
-    width: 70%;
+    width: 60%;
     height: 35px;
     justify-self: center;
     align-self: flex-end;
 }
 .inputs {
-    width: 70%;
+    width: 60%;
     height: 35px;
     justify-self: center;
     align-self: baseline;
+    border-radius: 5px;
+    border: solid 1px #FCA61F;
+    padding-left: 10px;
 }
 .botao {
     width: 30%;
     height: 30px;
     justify-self: center;
+    background-color: #FCA61F;
+    border-radius: 5px;
+    border: none;
+    box-shadow: #86580e 1px 1px;
+}
+
+@media (max-width: 770px){
+    .contBase{
+        height: 400px;
+    }
+    label, .botao{
+        margin-top: 10px
+    }
+
+}
+@media (max-width: 625px){
+    .contBase{
+        grid-template-areas: 
+        'imagem' 
+        'form';
+        box-shadow: none;
+    }
+    label{
+       margin-top: 15px;
+    }
+    .botao{
+        margin-top: 15px;
+    }
+}
+@media (max-width: 400px){
+    .titulo{
+        font-size: 25px;
+    }
+}
+@media (min-width: 1500px){
+    .contBase{
+        height: 815px;
+    }
+    .titulo{
+        font-size: 50px;
+    }
+    small{
+        font-size:40px;
+    }
+    .inputs, .botao {
+        height: 50px;
+        font-size: 20px;
+    }
+    label{
+        font-size: 25px;
+    }
 }
