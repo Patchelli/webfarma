@@ -3,6 +3,7 @@ import Intro from "../Components/Intro/Intro";
 import Navbar from "../Components/Navbar/Navbar";
 import Product from "../Components/Products/Product";
 import Services from "../Components/Services/Services";
+import Testimonial from "../Components/Testimonial/Testimonial";
 import Work from "../Components/Work/Work";
 
 
@@ -14,6 +15,7 @@ const Home = () => {
             <Services />
             <Work />
             <Product />
+            <Testimonial />
         </>
     )
 }
