@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { themeContext } from "../../Context";
 import './Product.css';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import api from "../../Api/getAll";
@@ -9,6 +10,9 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/scrollbar";
 const Product = () => {
+
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
 
     const [produtos, setProducts] = useState([]);
     const getProducts = async () => {
@@ -28,7 +32,7 @@ const Product = () => {
     return (
 
         <div className="products">
-            <span>Produtos Recentes</span>
+            <span style={{ color: darkMode ? "white" : "" }}>Produtos Recentes</span>
             <span>Produtos</span>
             <Swiper
                 modules={[Autoplay, Pagination, Navigation]}

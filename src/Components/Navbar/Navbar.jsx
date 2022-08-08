@@ -1,4 +1,5 @@
 import React from "react";
+import Toggle from "../Toggle/Toggle";
 import './Navbar.css';
 const Navbar = () => {
 
@@ -8,7 +9,7 @@ const Navbar = () => {
                 <div className="n-name">
                     WebFarma
                 </div>
-                <span>toggle</span>
+                <Toggle />
             </div>
             <div className="n-right">
                 <div className="n-list">

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { themeContext } from "../../Context";
 import Card from "../Card/Card";
 import './Services.css';
 import Motoboy from '../../img/entregador.png'
@@ -6,17 +7,20 @@ import Seringa from '../../img/syringe.png'
 import Celular from '../../img/online-store.png'
 
 const Services = () => {
+
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
     return (
         <div className="services">
             {/* Left */}
             <div className="awesome">
-                <span>Qualidade</span>
+                <span style={{ color: darkMode ? "white" : "" }}>Qualidade</span>
                 <span>Serviços</span>
-                <spane>
+                <span style={{ color: darkMode ? "white" : "" }}>
                     Lorem ipsum dolor sit amet consectetur anihil voluptas rem corrupti laborum expedita, ab hic ipsa facere quos?
                     <br />
                     Lorem ipsum dolor sit amet
-                </spane>
+                </span>
                 <button className="button s-button">Download</button>
                 <div className="blur s-blur1" style={{ background: "#ABF1FF94" }} ></div>
             </div>
