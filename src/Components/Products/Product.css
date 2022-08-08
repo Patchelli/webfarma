@@ -1,0 +1,37 @@
+.products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.products span:nth-child(1) {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.products span:nth-child(2) {
+    color: var(--orange);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.products swiper {
+    overflow: visible !important;
+}
+
+.products-slider {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.products-slider .swiper-slide {
+    width: 20rem;
+}
+
+.products img {
+    width: 14rem;
+    filter: drop-shadow(-12px 15px 13px rgba(0, 0, 0, 0.25));
+}
