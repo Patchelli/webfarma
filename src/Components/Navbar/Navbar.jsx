@@ -4,6 +4,7 @@ import './Navbar.css';
 import { Link } from 'react-scroll'
 import Experience from "../Experience/Experience";
 import Product from "../Products/Product";
+import { Link as Links } from 'react-router-dom';
 const Navbar = () => {
 
     return (
@@ -26,9 +27,9 @@ const Navbar = () => {
                         <Link spy={true} to={'Experience'} smooth={true} activeClass='activeClass'>
                             <li>Experiencias</li>
                         </Link>
-                        <Link spy={true} to={'Product'} smooth={true} activeClass='activeClass'>
+                        <Links to='/produtos' smooth={true} activeClass='activeClass'>
                             <li>Produtos</li>
-                        </Link>
+                        </Links>
                         <Link spy={true} to={'Testimonial'} smooth={true} activeClass='activeClass'>
                             <li>Testemunhos</li>
                         </Link>
