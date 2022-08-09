@@ -17,3 +17,7 @@ export const putProduct = async (id, body) => {
 export const postNewProduct = async (body) => {
     const resp = await api.post(`/product`, body)
 }
+
+export const deleteProduct = async (id) => {
+    const resp = await api.delete(`/product/${id}`)
+}
