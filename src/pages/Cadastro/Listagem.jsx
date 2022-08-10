@@ -41,7 +41,8 @@ export const Listagem = () => {
                     }} />
                     <button onClick={() => {
                         input.length == 0 ? setProductsShown(products) : setProductsShown(products.filter(el => el.name.toLowerCase().includes(input.toLowerCase())))
-
+                        console.log('prod shown')
+                        console.log(productsShown)
                     }}>Pesquisar</button>
                 </div>
                 <Link to='/Cadastro'>Novo Produto</Link>

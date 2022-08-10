@@ -4,8 +4,10 @@ import { useState } from 'react'
 import { Fieldset } from '../../Components/Fieldset/Fieldset'
 import { postNewProduct } from '../../Api/getAll'
 import s from './NewProduct.module.css'
+import { useNavigate } from 'react-router-dom'
 
 export const NewProduct = () => {
+    const navigate = useNavigate()
     const [band, setBand] = useState()
     const [info, setInfo] = useState({
         name: '',
@@ -42,40 +44,54 @@ export const NewProduct = () => {
     }, [])
 
     return (
-        <main>
-            <h1>Product</h1>
-            <Fieldset name='name' label='Nome' type='text' value={info.name} keyState='name' func={HandleInput} />
-            <Fieldset name='brand' label='Marca' type='text' value={info.brand} keyState='brand' func={HandleInput} />
-            <Fieldset name='quantity' label='Quantidade' type='number' value={info.quantity} keyState='quantity' func={HandleInput} />
-            <Fieldset name='value' label='Valor' type='number' value={info.value} keyState='value' func={HandleInput} />
+        <main className={s.container}>
 
-            <p>Tarja:</p>
+            <form action="">
+                <h1>Product</h1>
+                <Fieldset name='name' label='Nome' type='text' value={info.name} keyState='name' func={HandleInput} />
+                <Fieldset name='brand' label='Marca' type='text' value={info.brand} keyState='brand' func={HandleInput} />
+                <Fieldset name='quantity' label='Quantidade' type='number' value={info.quantity} keyState='quantity' func={HandleInput} />
+                <Fieldset name='value' label='Valor' type='number' value={info.value} keyState='value' func={HandleInput} />
 
-            <fieldset>
-                <select name="bands" id="bands" onChange={({ target }) => HandleRadio(target)} required>
-                    <option value=''>-</option>
-                    <option value="blackBand">Preta</option>
-                    <option value="redBand">Vermelha</option>
-                    <option value="yellowBand">Amarela</option>
-                </select>
-            </fieldset>
+                <div className={s.lowerSection}>
+                    <div className={s.select}>
+                        <p>Tarja:</p>
 
-            <button
-                onClick={() => {
-                    if (info.blackBand == 0 && info.redBand == 0 && info.yellowBand == 0) setBand(true)
-                    else {
-                        postNewProduct(info)
-                        setBand()
+
+                        <select name="bands" id="bands" onChange={({ target }) => HandleRadio(target)} required>
+                            <option value=''>-</option>
+                            <option value="blackBand">Preta</option>
+                            <option value="redBand">Vermelha</option>
+                            <option value="yellowBand">Amarela</option>
+                        </select>
+
+                    </div>
+
+                    <div className={s.btnContainer}>
+                        <button
+                            onClick={(e) => {
+                                e.preventDefault()
+                                if (info.blackBand == 0 && info.redBand == 0 && info.yellowBand == 0) setBand(true)
+                                else {
+                                    postNewProduct(info)
+                                    setBand()
+                                    navigate('/Listagem')
+                                }
+                                console.log(info)
+                            }}
+                        >Cadastrar</button>
+
+                    </div>
+                </div>
+
+
+
+                <div>
+                    {
+                        !!band && <p className={s.errorMsg}>Favor preencher todos os campos</p>
                     }
-                    console.log(info)
-                }}
-            >Clique</button>
-
-            <div>
-                {
-                    !!band && <p className={s.errorMsg}>Favor preencher todos os campos</p>
-                }
-            </div>
+                </div>
+            </form>
         </main>
     )
 }

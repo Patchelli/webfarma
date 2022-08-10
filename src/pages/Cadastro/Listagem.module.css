@@ -11,7 +11,7 @@
     font-weight: 600;
     text-align: left;
     width: 70%;
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid var(--orange);
 }
 
 .upperSection {
@@ -41,7 +41,7 @@
 }
 
 .searchSection>button:hover {
-    background-color: var(--black);
+    background-color: var(--yellow);
     color: var(--white);
 }
 
@@ -55,7 +55,7 @@
 }
 
 .upperSection>a:hover {
-    background-color: var(--primary);
+    background-color: var(--orange);
     color: var(--white);
 }
 
@@ -68,7 +68,7 @@
     display: grid;
     gap: 2px;
     grid-template-areas: 'name brand quantity value band btn';
-    grid-template-columns: 300px 250px 100px 100px 150px 50px;
+    grid-template-columns: 300px 200px 100px 100px 150px 50px;
 }
 
 @media (max-width: 426px) {

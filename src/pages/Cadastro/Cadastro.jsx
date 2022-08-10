@@ -43,8 +43,6 @@ export const Cadastro = () => {
         }
     }
 
-    // console.log(info)
-
     async function req() {
         const resp = await getProductById(params.id);
         setInfo(resp);
@@ -56,37 +54,40 @@ export const Cadastro = () => {
 
     const HandleDelete = (id) => {
         deleteProduct(id)
-        navigate('/products')
+        navigate('/Listagem')
     }
 
     const HandleUpdate = (id, info) => {
         putProduct(id, info)
+        navigate('/Listagem')
     }
 
     return (
         <main className={s.container}>
 
             <form className={s.form}>
-                <h1 style={{ textAlign: 'center' }}>Product {params.id}</h1>
+                <h1>Edit Product: {info.name}</h1>
 
                 <Fieldset name='name' label='Nome' type='text' value={info.name} keyState='name' func={HandleInput} />
                 <Fieldset name='brand' label='Marca' type='text' value={info.brand} keyState='brand' func={HandleInput} />
                 <Fieldset name='quantity' label='Quantidade' type='number' value={info.quantity} keyState='quantity' func={HandleInput} />
                 <Fieldset name='value' label='Valor' type='number' value={info.value} keyState='value' func={HandleInput} />
 
-                <div className={s.select}>
+                <div className={s.lowerSection}>
+                    <div className={s.select}>
+                        <p>Tarja:</p>
 
-                    <p>Tarja:</p>
+                        <select name="bands" id="bands" onChange={({ target }) => HandleRadio(target)}
+                            defaultValue={initialBand}>
 
-                    <select name="bands" id="bands" onChange={({ target }) => HandleRadio(target)}
-                        defaultValue={initialBand}>
+                            <option value="blackBand">Preta</option>
+                            <option value="redBand">Vermelha</option>
+                            <option value="yellowBand">Amarela</option>
+                        </select>
 
-                        <option value="blackBand">Preta</option>
-                        <option value="redBand">Vermelha</option>
-                        <option value="yellowBand">Amarela</option>
-                    </select>
 
-                    <div className={s.buttonContainer}>
+                    </div>
+                    <div className={s.btnContainer}>
                         <button onClick={(event) => {
                             event.preventDefault()
                             HandleUpdate(params.id, info)
@@ -95,13 +96,12 @@ export const Cadastro = () => {
                         <button onClick={(event) => {
                             event.preventDefault()
                             HandleDelete(params.id)
-                        }}>Del</button>
+                        }}>Deletar</button>
 
 
 
                     </div>
                 </div>
-
             </form>
 
         </main>

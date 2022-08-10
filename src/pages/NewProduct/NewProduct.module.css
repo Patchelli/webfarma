@@ -1,3 +1,57 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(white 60%, var(--orange));
+    background-color: palevioletred;
+}
+
+.container h1 {
+    border-bottom: 2px solid var(--orange);
+    text-align: center;
+}
+
+.container>form {
+    width: 60%;
+}
+
+.lowerSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.select>p {
+    margin-right: 15px;
+}
+
+.select>select {
+    width: 40%;
+}
+
+.btnContainer {
+    display: flex;
+    align-items: center;
+}
+
+.btnContainer>button {
+    margin: 0 20px;
+    padding: 5px;
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+    transition: 0.5s;
+}
+
+.btnContainer>button:hover {
+    background-color: var(--orange);
+}
+
 .errorMsg {
     color: red;
 }
