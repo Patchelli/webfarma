@@ -1,33 +1,30 @@
 import React, { useEffect, useState, useContext } from "react";
 import { themeContext } from "../../Context";
 import './Product.css';
-import { Swiper, SwiperSlide } from 'swiper/react'
-import api from "../../Api/getAll";
+import { getProducts } from "../../Api/getAll";
 import Doctor from '../../img/remedio.png'
-import 'swiper/css'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, Navigation } from "swiper";
+import 'swiper/css'
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/scrollbar";
+
 const Product = () => {
 
     const theme = useContext(themeContext);
     const darkMode = theme.state.darkMode;
 
     const [produtos, setProducts] = useState([]);
-    const getProducts = async () => {
-        const resp = await api.get('/product')
-        return resp.data;
-    }
-
-    useEffect(() => {
-        req()
-    }, [])
 
     async function req() {
         const resp = await getProducts()
         setProducts(resp)
     }
+
+    useEffect(() => {
+        req()
+    }, [])
 
     return (
 

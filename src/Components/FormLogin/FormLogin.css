@@ -1,0 +1,123 @@
+.contBase{
+    width: 80%;
+    height: 480px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #FCA61F;
+    border-radius: 20px 20px 20px 20px; 
+    color: rgb(17, 17, 18);
+    box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 6px;
+}
+.contBase > img {
+    justify-self: center;
+    align-self: center;
+    width: 80%;
+    grid-area: 'imagem';
+}
+.contForm{
+    width: 100%;
+    grid-area: 'formulario';
+    background-color: rgb(238, 236, 236);
+    display: grid;
+    border-radius: 20px 0px;
+    align-items: center;
+    padding: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+article {
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+}
+.titulo {
+    font-size: 28px;
+}
+
+label {
+    width: 60%;
+    height: 35px;
+    justify-self: center;
+    align-self: flex-end;
+}
+.inputs {
+    width: 60%;
+    height: 35px;
+    justify-self: center;
+    align-self: baseline;
+    border-radius: 5px;
+    border: solid 1px #FCA61F;
+    padding-left: 10px;
+}
+.botao {
+    width: 30%;
+    height: 30px;
+    justify-self: center;
+    background-color: #FCA61F;
+    border-radius: 5px;
+    border: none;
+    box-shadow: #86580e 1px 1px;
+    margin-top: 15px;
+}
+.button {
+    width: 40%;
+    justify-self: center;
+    margin-top: 15px;
+}
+@media (max-width: 770px){
+    .contBase{
+        height: 500px;
+    }
+    label, .botao{
+        margin-top: 10px
+    }
+
+}
+@media (max-width: 625px){
+    label{
+       margin-top: 15px;
+    }
+    .botao{
+        margin-top: 15px;
+    }
+}
+@media (max-width: 430px){
+    .contBase{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        box-shadow: none;
+    }
+    .contForm{
+        width: 94%;
+        grid-area: 'formulario';
+        background-color: rgb(238, 236, 236);
+        display: grid;
+        border-radius: 20px 0px;
+        align-items: center;
+    }
+
+    .titulo{
+        font-size: 20px;
+    }
+}
+@media (min-width: 1500px){
+    .contBase{
+        height: 815px;
+    }
+    .titulo{
+        font-size: 50px;
+    }
+    small{
+        font-size:40px;
+    }
+    .inputs, .botao {
+        height: 50px;
+        font-size: 20px;
+    }
+    label{
+        font-size: 25px;
+    }
+}
