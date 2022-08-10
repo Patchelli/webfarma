@@ -13,19 +13,19 @@ const Testimonial = () => {
         {
             img: Thom,
             review:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
+                "Entrega super rapida",
             name: "Thom"
         },
         {
             img: Kassi,
             review:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
+                "Peço doralgina todos os dias, após programar em JAVA!",
             name: "Kassi"
         },
         {
             img: Inara,
             review:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
+                "Comprei um sedativo para o baby Inara, dorme 3 dias seguidos agora. Obrigado WebFarma",
             name: "Inara"
         }
 
@@ -34,7 +34,7 @@ const Testimonial = () => {
     return (
         <div className="t-wrapper" id="Testimonial">
             <div className="t-heading">
-                <span>Testemunhos dos nossos </span>
+                <span>Depoimentos dos nossos </span>
                 <span>Clientes</span>
                 <div className="blur t-blur1" style={{ background: "var(--purple)" }}></div>
                 <div className="blur t-blur2" style={{ background: "skyblue" }}></div>
