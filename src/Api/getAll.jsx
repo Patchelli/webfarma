@@ -4,6 +4,12 @@ const api = axios.create({
     baseURL: "https://farmaapi2.herokuapp.com",
 })
 
+export const getProducts = async () => {
+    const resp = await api.get('/product')
+    return resp.data;
+}
 
-
-export default api;
+export const putProduct = async (id, body) => {
+    const resp = await api.put(`/product/${id}`, body)
+    console.log(resp)
+}
