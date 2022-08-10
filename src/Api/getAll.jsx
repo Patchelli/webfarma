@@ -20,4 +20,10 @@ export const postNewProduct = async (body) => {
 
 export const deleteProduct = async (id) => {
     await api.delete(`/product/${id}`)
-} 
+}
+
+export const getProductById = async (id) => {
+    const resp = await api.get(`/product/${id}`)
+    console.log(resp.data)
+    return resp.data;
+}

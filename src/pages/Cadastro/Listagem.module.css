@@ -1,0 +1,111 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container>h1 {
+    margin-top: 41px;
+    font-weight: 600;
+    text-align: left;
+    width: 70%;
+    border-bottom: 2px solid var(--primary);
+}
+
+.upperSection {
+    margin: 48px 0;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchSection {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchSection>input {
+    width: 75%;
+}
+
+.searchSection>button {
+    padding: 0 20px;
+    border: none;
+    background-color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.searchSection>button:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.upperSection>a {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.upperSection>a:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.gridContainer {
+    display: grid;
+    row-gap: 2px;
+}
+
+.fields {
+    display: grid;
+    gap: 2px;
+    grid-template-areas: 'name brand quantity value band btn';
+    grid-template-columns: 300px 250px 100px 100px 150px 50px;
+}
+
+@media (max-width: 426px) {
+    .container>h1 {
+        width: 100%;
+        padding: 0 20px;
+        overflow: hidden;
+    }
+
+    .upperSection {
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+    }
+
+    .searchSection {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .searchSection>input {
+        width: 90%;
+    }
+
+    .searchSection>button {
+        height: 1.5em;
+    }
+
+    .upperSection>a {
+        height: 1.5em;
+        width: 80%;
+        text-align: center;
+    }
+
+    .test {
+        width: 100%;
+        overflow: scroll;
+    }
+
+}

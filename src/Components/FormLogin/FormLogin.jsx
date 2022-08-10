@@ -11,7 +11,7 @@ const FormLogin = () => {
 
   function validarDados() {
     if (userName.toLowerCase() === 'admin' && password.toLowerCase() === 'admin') {
-      navigate('/Cadastro')
+      navigate('/Listagem')
     } else {
       console.log('Usuário ou senha inválida');
     }
